@@ -1,10 +1,15 @@
 package martynasb.kata
-import java.util.*
 
 class StringCalculator {
-    fun add(sum: kotlin.String): kotlin.Int? {
+    fun add(sum: String): Int? {
         if (sum.isEmpty()) return null
 
-        return sum.toInt()
+        val arrayOfNumbers:List<Int> = sum.split(",", "\n").map {
+            val num:Int = it.toInt()
+            if (num < 0) throw IllegalArgumentException("Negatives not allowed:")
+            num
+        }
+
+        return arrayOfNumbers.reduce{ acc, element -> acc + element }
     }
 }
