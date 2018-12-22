@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
+import java.lang.Exception
 import martynasb.kata.StringCalculator
 
 class CalculatorTest {
@@ -32,6 +33,7 @@ class CalculatorTest {
 
     @Test
     fun NegativeNumbersThrowException() {
-        Assertions.assertThrows(IllegalArgumentException::class.java) { stringCalc.add("-1,5") }
+        val exception: Exception = Assertions.assertThrows(IllegalArgumentException::class.java) { stringCalc.add("-1,5,-3") }
+        Assertions.assertEquals("Negatives not allowed: -1, -3", exception.message)
     }
 }
