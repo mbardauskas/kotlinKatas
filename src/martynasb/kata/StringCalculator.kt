@@ -4,8 +4,10 @@ class StringCalculator {
     fun add(input: String): Int? {
         if (input.isEmpty()) return null
 
-        val arrayOfNumbers: List<Int> = this.assertNoNegatives(
-                this.parseInput(input)
+        val arrayOfNumbers: List<Int> = this.filterOutGreaterThan1000(
+                this.assertNoNegatives(
+                        this.parseInput(input)
+                )
         )
 
         return arrayOfNumbers.reduce { acc, element -> acc + element }
@@ -17,6 +19,10 @@ class StringCalculator {
             return numbers
         }
         throw IllegalArgumentException("Negatives not allowed: " + negatives.joinToString { it.toString() })
+    }
+
+    private fun filterOutGreaterThan1000 (numbers: List<Int>): List<Int> {
+        return numbers.filter { it <= 1000 }
     }
 
     private fun parseInput(input: String): List<Int> {

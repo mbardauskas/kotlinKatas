@@ -36,4 +36,9 @@ class CalculatorTest {
         val exception: Exception = Assertions.assertThrows(IllegalArgumentException::class.java) { stringCalc.add("-1,5,-3") }
         Assertions.assertEquals("Negatives not allowed: -1, -3", exception.message)
     }
+
+    @Test
+    fun NumbersGreaterThan1000AreIgnored() {
+        Assertions.assertEquals(15, stringCalc.add("5\n5,5,1001"))
+    }
 }
