@@ -1,4 +1,4 @@
-package martynasb.kata
+package martynasb.katas
 
 class StringCalculator {
     fun add(input: String): Int? {

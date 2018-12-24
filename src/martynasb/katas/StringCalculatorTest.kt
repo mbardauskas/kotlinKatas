@@ -1,7 +1,8 @@
+package martynasb.katas
+
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import java.lang.Exception
-import martynasb.kata.StringCalculator
 
 class CalculatorTest {
     private val stringCalc = StringCalculator()
