@@ -1,4 +1,4 @@
-package martynasb.katas
+package katas.greeter
 
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Assertions
@@ -11,7 +11,6 @@ class GreeterTest {
 
     @BeforeEach
     fun beforeEach() {
-
         uut = Greeter(regularTimeGetter)
     }
 

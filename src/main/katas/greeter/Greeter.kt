@@ -1,4 +1,4 @@
-package martynasb.katas
+package katas.greeter
 
 class Greeter(
         private val getTimeInHours: () -> Int
