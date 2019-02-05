@@ -1,4 +1,4 @@
-package katas.greeter
+package greeter
 
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Assertions

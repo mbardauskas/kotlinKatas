@@ -1,4 +1,4 @@
-package katas.greeter
+package greeter
 
 class Greeter(
         private val getTimeInHours: () -> Int

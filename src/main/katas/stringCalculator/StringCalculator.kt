@@ -1,4 +1,4 @@
-package katas.stringCalculator
+package stringCalculator
 
 class StringCalculator {
     fun add(input: String): Int? {
