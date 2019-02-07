@@ -12,7 +12,7 @@ buildscript {
 
 apply plugin: 'kotlin'
 
-defaultTasks 'test'
+//defaultTasks 'test'
 
 repositories {
   mavenCentral()
@@ -21,10 +21,19 @@ repositories {
 dependencies {
   compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
   testCompile 'junit:junit:4.11'
-  testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+//  testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
 }
 
-jar {
-  manifest { attributes 'Main-Class': 'katas.Greeter' }
-  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-}
+//jar {
+//  manifest { attributes 'Main-Class': 'katas.Greeter' }
+//  from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+//}
+
+//sourceSets {
+//  main {
+//    java {
+//      srcDir 'src'
+//      srcDir 'test'
+//    }
+//  }
+//}
